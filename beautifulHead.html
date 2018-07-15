@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="今アナタがご覧になっている、このオンズのウェブサイトでは読み込み速度のスピードアップや各種マークアップのクオリティ維持のために随時徹底した改善作業を行っています。これまでも本ブログにて様々なテクニックを紹介してきましたが...">
+  <meta name="format-detection" content="telephone=no,address=no,email=no">
+  <meta name="thumbnail" content="https://on-ze.com/icon/icon.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@on_ze_com">
+  <meta property="twitter:account_id" content="2276810360">
+  <meta property="fb:admins" content="1549202991">
+  <meta property="fb:app_id" content="1407502336166997">
+  <meta property="og:description" content="今アナタがご覧になっている、このオンズのウェブサイトでは読み込み速度のスピードアップや各種マークアップのクオリティ維持のために随時徹底した改善作業を行っています。これまでも本ブログにて様々なテクニックを紹介してきましたが...">
+  <meta property="og:title" content="HTML の &lt;head&gt;〜&lt;/head&gt; 内に書くタグの順番にも気を遣ってみた。">
+  <meta property="og:url" content="https://on-ze.com/archives/4831">
+  <meta property="og:image" content="https://on-ze.com/wordpress/wp-content/themes/onze-2017/inc/timthumb.php?src=https://on-ze.com/wordpress/wp-content/uploads/2015/03/badge_html5.png&w=1600&h=630&q=100">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ONZE">
+  <link rel="canonical" href="https://on-ze.com/archives/4831">
+  <link rel="icon" href="https://on-ze.com/wordpress/wp-content/themes/onze-2017/icon/favicon.ico">
+  <link rel="apple-touch-icon" href="https://on-ze.com/icon/icon.png">
+  <link rel="alternate" type="application/rss+xml" href="https://on-ze.com/feed">
+  <link rel="stylesheet" href="https://on-ze.com/wordpress/wp-content/themes/onze-2017/style-blog.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css">
+  <link rel='https://api.w.org/' href='https://on-ze.com/wp-json/' />
+  <link rel="alternate" type="application/json+oembed" href="https://on-ze.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fon-ze.com%2Farchives%2F4831" />
+  <link rel="alternate" type="text/xml+oembed" href="https://on-ze.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fon-ze.com%2Farchives%2F4831&#038;format=xml" />
+  <title>HTML の &lt;head&gt;〜&lt;/head&gt; 内に書くタグの順番にも気を遣ってみた。 - ONZE</title>
+</head>
+
+<body class="post-template-default single single-post postid-4831 single-format-standard">
+  <div id="to"></div>
+  <div id="page" class="hfeed site">
+    <header id="header" class="header">
+      <div class="inner">
+        <div id="h-logo">
+          <h1 class="site-title"><a href="https://on-ze.com/blog"><i>ONZE</i>HTML の &lt;head&gt;〜&lt;/head&gt; 内に書くタグの順番にも気を遣ってみた。</a></h1>
+          <h2 class="site-description"><a href="https://on-ze.com/blog"><b>ONZE</b>/<b>BLOG</b></a></h2>
+          <p>オンズ開発ブログ</p>
+        </div><button class="navi-toggle" tabindex="0" accesskey="m"><span></span><i>Menu</i></button>
+        <nav id="h-navi" class="nav">
+          <ul>
+            <li id="menu-item-6712" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-6712"><a href="https://on-ze.com/blog">ホーム</a></li>
+            <li id="menu-item-6713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6713"><a href="https://on-ze.com/blog/about">このブログについて</a></li>
+            <li id="menu-item-6714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6714"><a href="https://on-ze.com/blog/ad">広告掲載について</a></li>
+            <li id="menu-item-6723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-6723"><a href="https://on-ze.com/">運営会社</a></li>
+            <li class="modal-open"><a href="#h-search">Search</a></li>
+          </ul>
+        </nav>
+        <div id="h-selector" class="selector">
+          <div class="table">
+            <div class="col"><select name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;' tabindex="1"><option selected="selected">月を選択</option> <option value='https://on-ze.com/archives/date/2018/06'> 2018年6月 &nbsp;(3)</option> <option value='https://on-ze.com/archives/date/2018/02'> 2018年2月 &nbsp;(5)</option> <option value='https://on-ze.com/archives/date/2018/01'> 2018年1月 &nbsp;(26)</option> <option value='https://on-ze.com/archives/date/2017/12'> 2017年12月 &nbsp;(21)</option> <option value='https://on-ze.com/archives/date/2017/11'> 2017年11月 &nbsp;(4)</option> <option value='https://on-ze.com/archives/date/2017/08'> 2017年8月 &nbsp;(8)</option> <option value='https://on-ze.com/archives/date/2017/04'> 2017年4月 &nbsp;(5)</option> <option value='https://on-ze.com/archives/date/2017/03'> 2017年3月 &nbsp;(3)</option> <option value='https://on-ze.com/archives/date/2016/12'> 2016年12月 &nbsp;(3)</option> <option value='https://on-ze.com/archives/date/2016/10'> 2016年10月 &nbsp;(5)</option> <option value='https://on-ze.com/archives/date/2016/08'> 2016年8月 &nbsp;(20)</option> <option value='https://on-ze.com/archives/date/2016/04'> 2016年4月 &nbsp;(1)</option> <option value='https://on-ze.com/archives/date/2016/01'> 2016年1月 &nbsp;(27)</option> <option value='https://on-ze.com/archives/date/2015/12'> 2015年12月 &nbsp;(15)</option> <option value='https://on-ze.com/archives/date/2015/11'> 2015年11月 &nbsp;(29)</option> <option value='https://on-ze.com/archives/date/2015/10'> 2015年10月 &nbsp;(31)</option> <option value='https://on-ze.com/archives/date/2015/09'> 2015年9月 &nbsp;(14)</option> <option value='https://on-ze.com/archives/date/2015/08'> 2015年8月 &nbsp;(8)</option> <option value='https://on-ze.com/archives/date/2015/07'> 2015年7月 &nbsp;(20)</option> <option value='https://on-ze.com/archives/date/2015/06'> 2015年6月 &nbsp;(17)</option> <option value='https://on-ze.com/archives/date/2015/05'> 2015年5月 &nbsp;(16)</option> <option value='https://on-ze.com/archives/date/2015/04'> 2015年4月 &nbsp;(19)</option> <option value='https://on-ze.com/archives/date/2015/03'> 2015年3月 &nbsp;(21)</option> <option value='https://on-ze.com/archives/date/2015/02'> 2015年2月 &nbsp;(12)</option> <option value='https://on-ze.com/archives/date/2015/01'> 2015年1月 &nbsp;(12)</option> <option value='https://on-ze.com/archives/date/2014/12'> 2014年12月 &nbsp;(13)</option> <option value='https://on-ze.com/archives/date/2014/11'> 2014年11月 &nbsp;(14)</option> <option value='https://on-ze.com/archives/date/2014/10'> 2014年10月 &nbsp;(14)</option> <option value='https://on-ze.com/archives/date/2014/09'> 2014年9月 &nbsp;(20)</option> <option value='https://on-ze.com/archives/date/2014/08'> 2014年8月 &nbsp;(16)</option> <option value='https://on-ze.com/archives/date/2014/07'> 2014年7月 &nbsp;(13)</option> <option value='https://on-ze.com/archives/date/2014/06'> 2014年6月 &nbsp;(10)</option> <option value='https://on-ze.com/archives/date/2014/05'> 2014年5月 &nbsp;(19)</option> <option value='https://on-ze.com/archives/date/2014/04'> 2014年4月 &nbsp;(19)</option> <option value='https://on-ze.com/archives/date/2014/03'> 2014年3月 &nbsp;(27)</option> <option value='https://on-ze.com/archives/date/2014/02'> 2014年2月 &nbsp;(27)</option> <option value='https://on-ze.com/archives/date/2014/01'> 2014年1月 &nbsp;(28)</option> <option value='https://on-ze.com/archives/date/2013/12'> 2013年12月 &nbsp;(25)</option> <option value='https://on-ze.com/archives/date/2013/11'> 2013年11月 &nbsp;(24)</option> <option value='https://on-ze.com/archives/date/2011/11'> 2011年11月 &nbsp;(2)</option></select></div>
+            <div
+              class="col"><select name="tag-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;' tabindex="3"><option selected="selected">タグを選択</option><option value="https://on-ze.com/archives/tag/htaccess">.htaccess (17)</option><option value="https://on-ze.com/archives/tag/ads">ADS (66)</option><option value="https://on-ze.com/archives/tag/android">Android (3)</option><option value="https://on-ze.com/archives/tag/api">API (8)</option><option value="https://on-ze.com/archives/tag/app">App (9)</option><option value="https://on-ze.com/archives/tag/css">CSS (76)</option><option value="https://on-ze.com/archives/tag/design">Design (47)</option><option value="https://on-ze.com/archives/tag/font">Font (21)</option><option value="https://on-ze.com/archives/tag/html">HTML (48)</option><option value="https://on-ze.com/archives/tag/icon">Icon (10)</option><option value="https://on-ze.com/archives/tag/illustlator">Illustlator (12)</option><option value="https://on-ze.com/archives/tag/ios">iOS (17)</option><option value="https://on-ze.com/archives/tag/ipad">iPad (6)</option><option value="https://on-ze.com/archives/tag/iphone">iPhone (18)</option><option value="https://on-ze.com/archives/tag/item">Item (5)</option><option value="https://on-ze.com/archives/tag/javascript">JavaScript (49)</option><option value="https://on-ze.com/archives/tag/jquery">jQuery (88)</option><option value="https://on-ze.com/archives/tag/mac">Mac (14)</option><option value="https://on-ze.com/archives/tag/mysql">MySQL (2)</option><option value="https://on-ze.com/archives/tag/news">NEWS (2)</option><option value="https://on-ze.com/archives/tag/photoshop">PhotoShop (8)</option><option value="https://on-ze.com/archives/tag/php">PHP (27)</option><option value="https://on-ze.com/archives/tag/seo">SEO (21)</option><option value="https://on-ze.com/archives/tag/service">Service (3)</option><option value="https://on-ze.com/archives/tag/windows">Windows (1)</option><option value="https://on-ze.com/archives/tag/wisdom">wisdom (21)</option><option value="https://on-ze.com/archives/tag/wordpress">WordPress (137)</option><option value="https://on-ze.com/archives/tag/wordpress-plugins">WordPress Plugins (12)</option><option value="https://on-ze.com/archives/tag/works">Works (16)</option></select></div>
+        </div>
+      </div>
+  </div>
+  <div id="h-search" class="modal">
+    <form name="searchform" method="get" id="searchform" action="https://on-ze.com/" role="search"><input type="text" name="s" value="Search Form" onclick="document.searchform.s.value=''" accesskey="q" tabindex="1"><button></button>
+      <div></div>
+    </form>
+  </div>
+  </header>
+  <main id="main" class="site-main">
+    <article id="post-4831" class="article post-4831 post type-post status-publish format-standard hentry category-blog tag-html tag-seo">
+      <div class="entry">
+        <section id="post-title">
+          <div class="inner">
+            <div id="hero"></div>
+            <div class="entry-title">
+              <h3>HTML の &lt;head&gt;〜&lt;/head&gt; 内に書くタグの順番にも気を遣ってみた。</h3></div>
+            <div class="entry-meta">
+              <ul>
+                <li class="entry-date date"><span class="published"><time datetime="2016-01-20T08:00:30+00:00">2016年1月20日 水曜日</time></span><span class="updated"><time datetime="2018-01-21T23:06:10+00:00">2018年1月21日 日曜日</time></span></li>
+                <li class="entry-category"><a href="https://on-ze.com/archives/category/blog" rel="category tag">開発ブログ</a></li>
+                <li class="entry-tags tags"><a href="https://on-ze.com/archives/tag/html" rel="tag">HTML</a>, <a href="https://on-ze.com/archives/tag/seo" rel="tag">SEO</a></li>
+                <li class="entry-time">8167文字：約14分</li>
+                <li class="vcard entry-author"><span class="fn"><a href="https://on-ze.com/archives/author/issei" title="ISSEI の投稿" rel="author">ISSEI</a></span><span class="n"><span class="family-name">原</span><span class="given-name">一勢</span></span><span class="org">ONZE</span></li>
+                <li
+                  class="bookmark"><a href="https://on-ze.com/archives/4831" rel="bookmark">https://on-ze.com/archives/4831</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="post-content" class="module">
+          <div class="breadcrumbs">
+            <ul>
+              <li><a href="https://on-ze.com">Home</a></li>
+              <li><a href="https://on-ze.com/blog">Blog</a></li>
+              <li>HTML の &lt;head&gt;〜&lt;/head&gt; 内に書くタグの順番にも気を遣ってみた。</li>
+            </ul>
+          </div>
+          <div class="ads">
+            <p>Ads by Google</p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8278675107749753" data-ad-slot="6734870423" data-ad-format="auto"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+          <div class="entry-content">
+            <p class="hide"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://on-ze.com/wordpress/wp-content/uploads/2015/03/badge_html5.png" alt="HTML5 badge" width="52" height="52" class="hide"><noscript><img src="https://on-ze.com/wordpress/wp-content/uploads/2015/03/badge_html5.png" alt="HTML5 badge" width="52" height="52" class="hide"></noscript></p>
+            <p>今アナタがご覧になっている、このオンズのウェブサイトでは読み込み速度のスピードアップや各種マークアップのクオリティ維持のために随時徹底した改善作業を行っています。</p>
+            <p>これまでも本ブログにて様々なテクニックを紹介してきましたが、今日は<code>&lt;head&gt;〜&lt;/head&gt;</code>タグ内のコードにフォーカスして、弊社が実際に行っているHTMLマークアップの考え方を紹介していきます。</p>
+            <p>ブラウザで「要素を検証」して実際にコードを見てもらうのが手っ取り早いのですが、参考までに以下にコードをコピーして記載します。</p>
+            <p>今日（2016年1月20日）現在のオンズのウェブサイトの<code>&lt;head&gt;〜&lt;/head&gt;</code>タグは次のように記載されています。</p><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="author" content="//on-ze.com"&gt;
+&lt;meta name="description" content="ホームページで「集客UP・売上UP・利益UP」の仕組みを作り、経営に関わるすべての問題をデザインのチカラで解決します。直感で「…！！」や「…？？」と感じたら、今すぐオンズにご相談ください。茨城県つくば市｜株式会社オンズ"&gt;
+&lt;meta name="format-detection" content="telephone=no,address=no,email=no"&gt;
+&lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;
+&lt;link rel="publisher" href="//plus.google.com/00000000000"&gt;
+&lt;link rel="canonical" href="https://on-ze.com"&gt;
+&lt;link rel="icon" href="/icon/favicon.ico"&gt;
+&lt;link rel="apple-touch-icon" href="/icon/icon.png"&gt;
+&lt;link rel="alternate" type="application/rss+xml" href="https://on-ze.com/feed"&gt;
+&lt;link rel="stylesheet" href="/style.css"&gt;
+&lt;title&gt;ONZE - オンズ&lt;/title&gt;
+&lt;/head&gt;
+</pre>
+            <p><strong>↑このコード「美しい」と感じませんか？</strong></p>
+            <p><em>最低限度の記述でシンプル。コメントタグも一切ナシ。わずか20行で収まっています。</em></p>
+            <p>慎重に必要なタグを厳選して、不必要なタグは躊躇せずに削除。そしてタイトルにあるとおりタグを配置する順番にも気を遣いました。<br/>試行錯誤の末に辿り着いたオンズ流のフォーマットで、現状ではコレが最善の設定というワケです。</p>
+            <p>当然、サイトのカテゴリーや運営スタイルなどによって必要になるタグは変わってきます。<br/>よって、<em>すべてのウェブサイトで真似をするようにはオススメできません。</em><br/>しかし「必要なタグ」と「不必要なタグ」とを見極める良い参考材料になると思います。</p>
+            <div id="toc_container" class="no_bullets">
+              <p class="toc_title">Contents</p>
+              <ul class="toc_list">
+                <li><a href="#ltheadgtltheadgt"><span class="toc_number toc_depth_1">1</span> &lt;head&gt;〜&lt;/head&gt; タグ内のコードを解説</a>
+                  <ul>
+                    <li><a href="#ltDOCTYPE_htmlgt"><span class="toc_number toc_depth_2">1.1</span> &lt;!DOCTYPE html&gt;</a></li>
+                    <li><a href="#lthtml_langjagt"><span class="toc_number toc_depth_2">1.2</span> &lt;html lang="ja"&gt;</a></li>
+                    <li><a href="#ltmeta_charsetUTF-8gt"><span class="toc_number toc_depth_2">1.3</span> &lt;meta charset="UTF-8"&gt;</a></li>
+                    <li><a href="#ltmeta_nameauthor_contenton-zecomgt"><span class="toc_number toc_depth_2">1.4</span> &lt;meta name="author" content="//on-ze.com"&gt;</a></li>
+                    <li><a href="#ltmeta_namedescription_contentgt"><span class="toc_number toc_depth_2">1.5</span> &lt;meta name="description" content="..."&gt;</a></li>
+                    <li><a href="#ltmeta_nameformat-detection_contenttelephonenoaddressnoemailnogt"><span class="toc_number toc_depth_2">1.6</span> &lt;meta name="format-detection" content="telephone=no,address=no,email=no"&gt;</a></li>
+                    <li><a href="#ltmeta_nameviewport_contentwidthdevice-widthinitial-scale10gt"><span class="toc_number toc_depth_2">1.7</span> &lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;</a></li>
+                    <li><a href="#ltlink_relpublisher_hrefplusgooglecom00000000000gt"><span class="toc_number toc_depth_2">1.8</span> &lt;link rel="publisher" href="//plus.google.com/00000000000"&gt;</a></li>
+                    <li><a href="#ltlink_relcanonical_hrefhttpson-zecomgt"><span class="toc_number toc_depth_2">1.9</span> &lt;link rel="canonical" href="https://on-ze.com"&gt;</a></li>
+                    <li><a href="#ltlink_relicon_hreficonfaviconicogt"><span class="toc_number toc_depth_2">1.10</span> &lt;link rel="icon" href="/icon/favicon.ico"&gt;</a></li>
+                    <li><a href="#ltlink_relapple-touch-icon_hreficoniconpnggt"><span class="toc_number toc_depth_2">1.11</span> &lt;link rel="apple-touch-icon" href="/icon/icon.png"&gt;</a></li>
+                    <li><a href="#ltlink_relalternate_typeapplicationrssxml_hrefhttpson-zecomfeedgt"><span class="toc_number toc_depth_2">1.12</span> &lt;link rel="alternate" type="application/rss+xml" href="https://on-ze.com/feed"&gt;</a></li>
+                    <li><a href="#ltlink_relstylesheet_hrefstylecssgt"><span class="toc_number toc_depth_2">1.13</span> &lt;link rel="stylesheet" href="/style.css"&gt;</a></li>
+                    <li><a href="#lttitlegtONZE_-_lttitlegt"><span class="toc_number toc_depth_2">1.14</span> &lt;title&gt;ONZE - オンズ&lt;/title&gt;</a></li>
+                  </ul>
+                </li>
+                <li><a href="#HTML"><span class="toc_number toc_depth_1">2</span> スクリプトタグはHTMLの最下部へ</a></li>
+                <li><a href="#i"><span class="toc_number toc_depth_1">3</span> トップページ以外では？</a></li>
+                <li><a href="#ltmeta_namekeywordsgt"><span class="toc_number toc_depth_1">4</span> &lt;meta name="keywords"&gt;は……？</a></li>
+                <li><a href="#i-2"><span class="toc_number toc_depth_1">5</span> まとめ</a></li>
+              </ul>
+            </div>
+            <h4><span id="ltheadgtltheadgt">&lt;head&gt;〜&lt;/head&gt; タグ内のコードを解説</span></h4>
+            <p>以下、それぞれのコードを1行づつ解説していきます</p>
+            <h5><span id="ltDOCTYPE_htmlgt">&lt;!DOCTYPE html&gt;</span></h5>
+            <p>まずは基本。HTML5でマークアップするための「DOCTYPE宣言」です。</p>
+            <p>大文字と小文字は区別されないので <code>&lt;!doctype html&gt;</code> などと記述してもOKです。</p>
+            <p>旧バージョンのHTML4.01では次のように記述する必要がありましたから、ずいぶんシンプルになりましたね。</p><pre>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+</pre>
+            <p><em>なおHTML文書では必ず最初に「DOCTYPE宣言」を記述する必要があります。</em></p>
+            <h5><span id="lthtml_langjagt">&lt;html lang="ja"&gt;</span></h5>
+            <p>lang属性で『"ja"』を指定することで「このHTML文書は日本語で書かれていますよ」という意味を与えています。</p>
+            <p>WordPressではテンプレートタグの「language_attributes();」を使うことで自動で出力されます。</p><pre>
+&lt;html &lt;?php language_attributes(); ?&gt;&gt;
+</pre>
+            <h5><span id="ltmeta_charsetUTF-8gt">&lt;meta charset="UTF-8"&gt;</span></h5>
+            <p>続いては文字エンコーディングの指定です。</p>
+            <p>日本語の文字コードの値としては「UTF-8」の他に「SHIFT_JIS」と「EUC-JP」を使う機会が多いでしょう。こちらも大文字と小文字の違いは区別されません。</p>
+            <p><em>文字エンコーディングを指定しないと、英語版のブラウザで日本語で作成されたウェブページにアクセスした場合などに文字化けが起きる可能性があります。ほぼ必須のタグなので忘れずに指定しましょう。</em></p>
+            <h5><span id="ltmeta_nameauthor_contenton-zecomgt">&lt;meta name="author" content="//on-ze.com"&gt;</span></h5>
+            <p>Appleのウェブサイトで<code>&lt;meta name="Author" content="Apple Inc." /&gt;</code>との記述があったので真似しました。<br/><del>唯一このタグだけが完全に自己満足の領域です。</del>→その後削除し、現在は記述していません。</p>
+            <p>SEO的には <code>&lt;meta name="author"&gt;</code> を記載しても効果は無いというのが一般的な意見です。<br/>知人のプログラマーさんが<em>「検索エンジンが著者情報（meta name="author"）を拾っているかも？」</em>なんて仰っていましたが、こればかりは検証しようが無いですね。</p>
+            <p>追記（2017年12月）：その後の検証で、どうやらこのタグは無意味のようなので削除しました。</p>
+            <h5><span id="ltmeta_namedescription_contentgt">&lt;meta name="description" content="..."&gt;</span></h5>
+            <p>検索エンジンの検索結果にも引用される重要なタグで、キーワードを効果的に散りばめて記述すればそれだけでもSEO的な効果が期待できます。</p>
+            <p>ディスクリプションを記載していない場合は、検索エンジンはページの本文テキストや画像のalt属性から検索ワードに関する単語部分を抽出して検索結果に反映させます。</p>
+            <p><em>文字数は120文字以内に収めるのが良さそうです。</em></p>
+            <h5><span id="ltmeta_nameformat-detection_contenttelephonenoaddressnoemailnogt">&lt;meta name="format-detection" content="telephone=no,address=no,email=no"&gt;</span></h5>
+            <p>各種スマートフォンやタブレット端末では、電話番号や住所またはメールアドレスだと推測される文字列があると自動でリンクが貼られます。</p>
+            <p>この機能を制御するのが「format-detection」タグです。</p>
+            <p>オンズのウェブサイトでは「<b>telephone=no,address=no,email=no</b>」として、すべての自動リンクを無効化しています。</p>
+            <h5><span id="ltmeta_nameviewport_contentwidthdevice-widthinitial-scale10gt">&lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;</span></h5>
+            <p>各種ブラウザのウィンドウサイズにデザインを最適化させるための設定です。</p>
+            <p>ここでは「width=device-width」を指定しているのでviewportの幅は端末や各種ブラウザのウィンドウの横幅に依存します。</p>
+            <h5><span id="ltlink_relpublisher_hrefplusgooglecom00000000000gt">&lt;link rel="publisher" href="//plus.google.com/00000000000"&gt;</span></h5>
+            <p>「rel="publisher"」はウェブサイトとサイトの所有者・発行者と紐付ける機能で、具体的にはGoogle+のアカウントIDを指定して使います。</p>
+            <p>実はまだ公式にはGoogleによる発表がなく、テストとして試している段階です。</p>
+            <p>追記：Googleからの公式のアナウンスはありませんが、2014年以降頃から検索結果に反映されなくなったので廃止されたかもしれません。<br/>オンズでも現在はこのタグを削除しています。</p>
+            <h5><span id="ltlink_relcanonical_hrefhttpson-zecomgt">&lt;link rel="canonical" href="https://on-ze.com"&gt;</span></h5>
+            <p>ウェブサイトを運営するとき、不本意にも同一内容の複数のページが存在してしまうケースがあります。これは「重複コンテンツ」と呼ばれる問題で、よくある例としては「www」や「index.html」の有無による複数URLが挙げられます。</p>
+            <p>例えば以下のURLは、いずれも同じ内容が表示されます。</p>
+            <ul>
+              <li>http://example.com</li>
+              <li>http://www.example.com</li>
+              <li>http://example.com/index.html</li>
+              <li>http://www.example.com/index.html</li>
+            </ul>
+            <p>どのURLをクリックしても同じウェブページを閲覧できますが、GoogleやBingなどの検索エンジンからは、異なる4つのページが存在すると認識されてしまい、<br/>SEOの観点では好ましくありません。</p>
+            <p><em>この問題を解決して、URLを正規化するのが「カノニカル」タグです。</em></p>
+            <p>必ず全ページで正しく出力されているかチェックしておきましょう。</p>
+            <h5><span id="ltlink_relicon_hreficonfaviconicogt">&lt;link rel="icon" href="/icon/favicon.ico"&gt;</span></h5>
+            <p>ファビコンを指定するためのタグです。</p>
+            <h5><span id="ltlink_relapple-touch-icon_hreficoniconpnggt">&lt;link rel="apple-touch-icon" href="/icon/icon.png"&gt;</span></h5>
+            <p>こちらは iPhone や iPad などのiOS端末で、ウェブサイトを「ホーム画面に追加」したときに表示されるアイコンを指定します。</p>
+            <h5><span id="ltlink_relalternate_typeapplicationrssxml_hrefhttpson-zecomfeedgt">&lt;link rel="alternate" type="application/rss+xml" href="https://on-ze.com/feed"&gt;</span></h5>
+            <p>RSSフィードのURLです。<br/>WordPressではテンプレートタグ <code>&lt;?php bloginfo('rss2_url'); ?&gt;</code> で出力可能です。</p>
+            <h5><span id="ltlink_relstylesheet_hrefstylecssgt">&lt;link rel="stylesheet" href="/style.css"&gt;</span></h5>
+            <p>読み込むスタイルシートの数が増えると、それだけウェブサイトの表示速度も遅くなっていきます。</p>
+            <p>特にWordPressでプラグインを多用する場合や、EC-CUBEの運用、その他Movable Type等のCMSや、各種フリーブログでは使用するスタイルシートが増加しがちです。表示速度の改善のために、なるべく1つにまとめましょう。</p>
+            <h5><span id="lttitlegtONZE_-_lttitlegt">&lt;title&gt;ONZE - オンズ&lt;/title&gt;</span></h5>
+            <p>最後にタイトルです。これも極めて重要なタグですが、生成は WordPress 4.1 から導入された新機能 <code>add_theme_support ('title-tag'); </code> に任せて自動で出力させています。</p>
+            <h4><span id="HTML">スクリプトタグはHTMLの最下部へ</span></h4>
+            <p>お気づきかと思いますが「script」タグは &lt;head&gt;〜&lt;/head&gt; 内には記述していません。</p>
+            <p>これもウェブサイトの表示速度改善のためで、<em>すべてのスクリプトはHTMLの最下部、閉じる&lt;/body&gt;タグの末尾にまとめて記述しています。</em></p>
+            <h4><span id="i">トップページ以外では？</span></h4>
+            <p>全ページで上記の書式のコードを記載しているワケではなく、ブログの各投稿記事では少し違ったフォーマットを使っています。</p><pre>
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="author" content="著者情報"&gt;
+&lt;meta name="description" content="記事の概要"&gt;
+&lt;meta name="format-detection" content="telephone=no,address=no,email=no"&gt;
+&lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;
+&lt;meta name="twitter:card" content="summary"&gt;
+&lt;meta name="twitter:site" content="@twitter"&gt;
+&lt;meta property="twitter:account_id" content="00000000000"&gt;
+&lt;meta property="fb:admins" content="00000000000"&gt;
+&lt;meta property="fb:app_id" content="00000000000"&gt;
+&lt;meta property="article:publisher" content="http://www.facebook.com/00000000000"gt;
+&lt;meta property="article:author" content="http://www.facebook.com/00000000000"gt;
+&lt;meta property="og:description" content="記事の概要"&gt;
+&lt;meta property="og:title" content="記事タイトル"&gt;
+&lt;meta property="og:url" content="http://example.com"&gt;
+&lt;meta property="og:image" content="http://example.com/images/thumbnail.png"&gt;
+&lt;meta property="og:type" content="article"&gt;
+&lt;meta property="og:site_name" content="EXAMPLE"&gt;
+&lt;link rel="publisher" href="//plus.google.com/00000000000"&gt;
+&lt;link rel="icon" href="/icon/favicon.ico"&gt;
+&lt;link rel="apple-touch-icon" href="/icon/icon.png"&gt;
+&lt;link rel="alternate" type="application/rss+xml" href="http://example.com/feed"&gt;
+&lt;link rel="stylesheet" href="//example.com/style.css"&gt;
+&lt;title&gt;記事タイトル&lt;/title&gt;
+&lt;/head&gt;
+</pre>
+            <p>さすがにトップページと同じように短くするのは難しいですが、それでも余分なタグが一切ないシンプルなマークアップになっています。</p>
+            <p>追加された要素は以下。</p>
+            <ul>
+              <li>meta name="twitter:card"</li>
+              <li>meta name="twitter:site"</li>
+              <li>meta property="twitter:account_id"</li>
+              <li>meta property="fb:admins"</li>
+              <li>meta property="fb:app_id"</li>
+              <li>meta property="article:publisher"</li>
+              <li>meta property="article:author"</li>
+              <li>meta property="og:description"</li>
+              <li>meta property="og:title"</li>
+              <li>meta property="og:url"</li>
+              <li>meta property="og:image"</li>
+              <li>meta property="og:type"</li>
+              <li>meta property="og:site_name"</li>
+            </ul>
+            <p>すべてTwitterとFacebookによる記事リンクの拡散を視野に入れたものです。</p>
+            <p>逆にブログの記事ページ以外では<strong>「SNSで拡散しなくてもよい」</strong>と潔く割り切っているため、上記コードは敢えて記載していません。</p>
+            <h4><span id="ltmeta_namekeywordsgt">&lt;meta name="keywords"&gt;は……？</span></h4>
+            <p>メタタグで「keywords」を記述することはSEOの基礎。…と思っている方へ。</p>
+            <p>それ、今となっては<strong>ガセネタ</strong>ですから！</p>
+            <p>当然 <code>&lt;meta name="keywords"&gt;</code> は記述していません。<br/>詳しくは下記リンク先の記事をご覧ください。</p>
+            <blockquote>
+              <p>まだキーワード設定で消耗してるの？ : <a href="https://on-ze.com/archives/2144" target="_blank">https://on-ze.com/archives/2144</a></p>
+            </blockquote>
+            <h4><span id="i-2">まとめ</span></h4>
+            <p>&lt;head&gt;〜&lt;/head&gt; 内で使われるタグは、主に「meta」「link」「title」「script」の4つ。<br/>このうち、文字コードを指定する「meta charset」以外はどんな順番で書いても差し支えありません。</p>
+            <p>しかし、どうせなら最適なパフォーマンスを発揮できる順序で記述したいものです。</p>
+            <p>そこで重要なのがJavaScriptの扱い方。ウェブブラウザは、ソースを読み込んだ後に上から順番にコードを評価・解釈していきます。</p>
+            <p>スクリプトの実行中は次のタグの処理がストップしてしまうので、基本的には &lt;head&gt;〜&lt;/head&gt; 内には「script」タグは記述しないようにしましょう。</p>
+            <p>また、少しでもHTTPリクエストを減らすために、CSSもJavaScriptもなるべく1つにまとめるようにします。</p>
+            <p><em>何度も指摘しますが &lt;head&gt;〜&lt;/head&gt;内の各タグはSEO的にも極めて重要です。</em><br/>細かな部分にもメスを入れて最善の解決策を模索してみてください。</p>
+            <div data-role="amazonjs" data-asin="4774174491" data-locale="JP" data-tmpl="" data-img-size="" class="asin_4774174491_JP_ amazonjs_item">
+              <div class="amazonjs_indicator"><span class="amazonjs_indicator_img"></span><a class="amazonjs_indicator_title" href="https://www.amazon.co.jp/%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89%E3%81%AF%E3%81%98%E3%82%81%E3%82%8BSEO-%E9%A1%A7%E5%AE%A2%E6%80%9D%E8%80%83%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8-%EF%BD%9E%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E9%87%8D%E8%A6%96%E3%81%AEWeb%E3%82%B5%E3%82%A4%E3%83%88%E3%82%925%E3%81%A4%E3%81%AE%E8%A6%96%E7%82%B9%E3%81%A7%E5%AE%9F%E7%8F%BE%E3%81%99%E3%82%8B-%E7%80%A7%E5%86%85-%E8%B3%A2/dp/4774174491?SubscriptionId=AKIAIFZUDIHA6GF2PJSQ&tag=onzieme-22&linkCode=xm2&camp=2025&creative=165953&creativeASIN=4774174491">これからはじめるSEO　顧客思考の教科書　～ユーザー重視のWebサイトを5つの視点で実現する</a>
+                <span
+                  class="amazonjs_indicator_footer"></span>
+              </div>
+            </div>
+          </div>
+          <div class="entry-sns">
+            <ul>
+              <li><a href="http://twitter.com/share?text=HTML+%E3%81%AE+%26lt%3Bhead%26gt%3B%E3%80%9C%26lt%3B%2Fhead%26gt%3B+%E5%86%85%E3%81%AB%E6%9B%B8%E3%81%8F%E3%82%BF%E3%82%B0%E3%81%AE%E9%A0%86%E7%95%AA%E3%81%AB%E3%82%82%E6%B0%97%E3%82%92%E9%81%A3%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%82%20&url=https://on-ze.com/archives/4831&via=on_ze_com"
+                  target="_blank">Twitter</a></li>
+              <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://on-ze.com/archives/4831" target="_blank">Facebook</a></li>
+              <li><a href="https://plus.google.com/share?url=https://on-ze.com/archives/4831" target="_blank">Google+</a></li>
+              <li><a href="http://feedly.com/index.html#subscription/feed/http://on-ze.com/feed" target="_blank">Feedly</a></li>
+              <li><a href="http://line.me/R/msg/text/?HTML の &lt;head&gt;〜&lt;/head&gt; 内に書くタグの順番にも気を遣ってみた。%0D%0Ahttps://on-ze.com/archives/4831">LINE</a></li>
+            </ul>
+          </div>
+          <h4>こちらの記事もいかがですか？</h4>
+          <p>アナタにオススメ！<br>同じカテゴリーの他の記事です。</p>
+          <div class="related-posts">
+            <ul>
+              <li><a href="https://on-ze.com/archives/1015"><span class="thumbnail"><img src="https://on-ze.com/wordpress/wp-content/themes/onze-2017/inc/timthumb.php?src=/wordpress/wp-content/uploads/2015/03/badge_html5.png&w=300&h=240&q=100" alt="【HTML5】nav 要素" width="300" height="240"></span><span class="title">【HTML5】nav 要素</span></a></li>
+              <li><a href="https://on-ze.com/archives/434"><span class="thumbnail"><img src="https://on-ze.com/wordpress/wp-content/themes/onze-2017/inc/timthumb.php?src=/wordpress/wp-content/uploads/2015/03/badge_html5.png&w=300&h=240&q=100" alt="【HTML5】b 要素。" width="300" height="240"></span><span class="title">【HTML5】b 要素。</span></a></li>
+              <li><a href="https://on-ze.com/archives/902"><span class="thumbnail"><img src="https://on-ze.com/wordpress/wp-content/themes/onze-2017/inc/timthumb.php?src=/wordpress/wp-content/uploads/2015/03/badge_html5.png&w=300&h=240&q=100" alt="【HTML5】title 要素。" width="300" height="240"></span><span class="title">【HTML5】title 要素。</span></a></li>
+              <li><a href="https://on-ze.com/archives/291"><span class="thumbnail"><img src="https://on-ze.com/wordpress/wp-content/themes/onze-2017/inc/timthumb.php?src=https://on-ze.com/wordpress/wp-content/themes/onze-2017/images/thumbnail.png&w=300&h=240&q=100" alt="12星座の早見表。" width="300" height="240"></span><span class="title">12星座の早見表。</span></a></li>
+              <li><a href="https://on-ze.com/archives/817"><span class="thumbnail"><img src="https://on-ze.com/wordpress/wp-content/themes/onze-2017/inc/timthumb.php?src=https://on-ze.com/wordpress/wp-content/themes/onze-2017/images/thumbnail.png&w=300&h=240&q=100" alt="【WordPress】プラグインを使わずに記事ごとに自動でkeywordsとdescriptionを設置する方法" width="300" height="240"></span><span class="title">【WordPress】プラグインを使わずに記事ごとに自動でkeywordsとdescriptionを設置する方法</span></a></li>
+              <li><a href="https://on-ze.com/archives/924"><span class="thumbnail"><img src="https://on-ze.com/wordpress/wp-content/themes/onze-2017/inc/timthumb.php?src=/wordpress/wp-content/uploads/2015/03/badge_html5.png&w=300&h=240&q=100" alt="【HTML5】article 要素" width="300" height="240"></span><span class="title">【HTML5】article 要素</span></a></li>
+              <li><a href="https://on-ze.com/archives/7438"><span class="thumbnail"><img src="https://on-ze.com/wordpress/wp-content/themes/onze-2017/inc/timthumb.php?src=https://on-ze.com/wordpress/wp-content/themes/onze-2017/images/thumbnail.png&w=300&h=240&q=100" alt="【SEO】多言語サイトでは「hreflang」タグの設定を忘れずに。" width="300" height="240"></span><span class="title">【SEO】多言語サイトでは「hreflang」タグの設定を忘れずに。</span></a></li>
+              <li><a href="https://on-ze.com/archives/911"><span class="thumbnail"><img src="https://on-ze.com/wordpress/wp-content/themes/onze-2017/inc/timthumb.php?src=/wordpress/wp-content/uploads/2015/03/badge_html5.png&w=300&h=240&q=100" alt="【HTML5】meta 要素" width="300" height="240"></span><span class="title">【HTML5】meta 要素</span></a></li>
+            </ul>
+          </div>
+          <div class="ads">
+            <p>Ads by Google</p>
+            <ul>
+              <li><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8278675107749753" data-ad-slot="8720296826" data-ad-format="auto"></ins>
+                <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+              </li>
+              <li><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8278675107749753" data-ad-slot="9790690820" data-ad-format="auto"></ins>
+                <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </article>
+    <div class="page-navi"><span class="pn-prev"><a href="https://on-ze.com/archives/5448" rel="prev"></a></span><span class="pn-next"><a href="https://on-ze.com/archives/5580" rel="next"></a></span></div>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="inner">
+      <div id="f-logo" class="vcard">
+        <div class="inner" data-width="min">
+          <h2>11</h2>
+          <h3><a href="https://on-ze.com/blog">ONZE</a></h3>
+          <h4 class="org fn">オンズ</h4>
+          <p>茨城県つくば市を拠点に、日本全国のウェブサイト制作を手掛ける株式会社オンズのブログです。<br>ウェブデザインや開発に関するノウハウを中心に、「WordPress」「jQuery」「PHP」「SEO」「Illustrator」などのキーワードに属する様々な情報を紹介しています。</p>
+        </div>
+      </div>
+      <div id="f-widget" class="widget">
+        <ul>
+          <li><a href="https://on-ze.com/archives/tag/htaccess">.htaccess（17）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/ads">ADS（66）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/android">Android（3）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/api">API（8）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/app">App（9）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/css">CSS（76）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/design">Design（47）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/font">Font（21）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/html">HTML（48）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/icon">Icon（10）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/illustlator">Illustlator（12）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/ios">iOS（17）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/ipad">iPad（6）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/iphone">iPhone（18）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/item">Item（5）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/javascript">JavaScript（49）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/jquery">jQuery（88）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/mac">Mac（14）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/mysql">MySQL（2）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/news">NEWS（2）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/photoshop">PhotoShop（8）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/php">PHP（27）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/seo">SEO（21）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/service">Service（3）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/windows">Windows（1）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/wisdom">wisdom（21）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/wordpress">WordPress（137）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/wordpress-plugins">WordPress Plugins（12）</a></li>
+          <li><a href="https://on-ze.com/archives/tag/works">Works（16）</a></li>
+        </ul>
+      </div>
+      <nav id="f-navi" class="nav">
+        <ul>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-6712"><a href="https://on-ze.com/blog">ホーム</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6713"><a href="https://on-ze.com/blog/about">このブログについて</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6714"><a href="https://on-ze.com/blog/ad">広告掲載について</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-6723"><a href="https://on-ze.com/">運営会社</a></li>
+        </ul>
+      </nav>
+      <nav id="f-sns" class="nav">
+        <ul>
+          <li><a href="https://ja-jp.facebook.com/株式会社-オンズ-473691596016331/" target="_blank">Facebook</a></li>
+          <li><a href="https://twitter.com/on_ze_com" target="_blank">Twitter</a></li>
+          <li><a href="https://on-ze.com/feed" target="_blank">RSS 2.0</a></li>
+        </ul>
+      </nav>
+      <div id="copy"><small>&copy; 2011 - 2018 ONZE.</small></div>
+    </div>
+  </footer>
+  </div>
+  <div id="bo">
+    <link rel='stylesheet' id='amazonjs-css' href='https://on-ze.com/wordpress/wp-content/plugins/amazonjs/css/amazonjs.css' type='text/css' media='all' />
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js'></script>
+    <script type='text/javascript'>
+      /* <![CDATA[ */
+      var tocplus = {
+        "visibility_show": "show",
+        "visibility_hide": "hide",
+        "width": "100%"
+      }; /* ]]> */
+    </script>
+    <script src='https://on-ze.com/wordpress/wp-content/plugins/table-of-contents-plus/front.min.js'></script>
+    <script src='https://on-ze.com/wordpress/wp-includes/js/wp-embed.min.js'></script>
+    <script src='https://on-ze.com/wordpress/wp-includes/js/comment-reply.min.js'></script>
+    <script src='https://on-ze.com/wordpress/wp-content/plugins/amazonjs/components/js/jquery-tmpl/jquery.tmpl.min.js'></script>
+    <script type='text/javascript'>
+      /* <![CDATA[ */
+      var amazonjsVars = {
+        "thickboxUrl": "https:\/\/on-ze.com\/wordpress\/wp-includes\/js\/thickbox\/",
+        "regionTemplate": {
+          "LinkJP": "<iframe src=\"http:\/\/rcm-jp.amazon.co.jp\/e\/cm?t=onzieme-22&o=9&p=8&l=as1&asins=${asins}&fc1=${fc1}&IS2=${IS2}&lt1=${lt1}&m=amazon&lc1=${lc1}&bc1=${bc1}&bg1=${bg1}&f=ifr\" style=\"width:120px;height:240px;\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\"><\/iframe>"
+        },
+        "resource": {
+          "BookAuthor": "\u8457\u8005",
+          "BookPublicationDate": "\u51fa\u7248\u65e5",
+          "BookPublisher": "\u51fa\u7248\u793e",
+          "NumberOfPagesValue": "${NumberOfPages}\u30da\u30fc\u30b8",
+          "ListPrice": "\u53c2\u8003\u4fa1\u683c",
+          "Price": "\u4fa1\u683c",
+          "PriceUsage": "\u4fa1\u683c\u304a\u3088\u3073\u767a\u9001\u53ef\u80fd\u6642\u671f\u306f\u8868\u793a\u3055\u308c\u305f\u65e5\u4ed8\/\u6642\u523b\u306e\u6642\u70b9\u306e\u3082\u306e\u3067\u3042\u308a\u3001\u5909\u66f4\u3055\u308c\u308b\u5834\u5408\u304c\u3042\u308a\u307e\u3059\u3002\u5546\u54c1\u306e\u8ca9\u58f2\u306b\u304a\u3044\u3066\u306f\u3001\u8cfc\u5165\u306e\u6642\u70b9\u3067 [Amazon.co.jp \u307e\u305f\u306f Javari.jp] \u306b\u8868\u793a\u3055\u308c\u3066\u3044\u308b\u4fa1\u683c\u304a\u3088\u3073\u767a\u9001\u53ef\u80fd\u6642\u671f\u306e\u60c5\u5831\u304c\u9069\u7528\u3055\u308c\u307e\u3059\u3002",
+          "PublicationDate": "\u767a\u58f2\u65e5",
+          "ReleaseDate": "\u30ea\u30ea\u30fc\u30b9\u65e5",
+          "SalesRank": "\u5546\u54c1\u30e9\u30f3\u30ad\u30f3\u30b0",
+          "SalesRankValue": "${SalesRank}\u4f4d",
+          "RunningTime": "\u6642\u9593",
+          "RunningTimeValue": "${RunningTime}\u5206",
+          "CustomerReviewTitle": "${Title} \u30ab\u30b9\u30bf\u30de\u30fc\u30ec\u30d3\u30e5\u30fc",
+          "SeeCustomerReviews": "\u30ab\u30b9\u30bf\u30de\u30fc\u30ec\u30d3\u30e5\u30fc\u3092\u898b\u308b",
+          "PriceUpdatedat": "(${UpdatedDate}\u6642\u70b9)"
+        },
+        "isCustomerReviewEnabled": "",
+        "isTrackEventEnabled": "",
+        "isFadeInEnabled": "",
+        "items": [{
+          "Author": "\u7027\u5185 \u8ce2",
+          "Binding": "\u5358\u884c\u672c\uff08\u30bd\u30d5\u30c8\u30ab\u30d0\u30fc\uff09",
+          "EAN": "9784774174495",
+          "EANList": {
+            "EANListElement": "9784774174495"
+          },
+          "IsAdultProduct": "0",
+          "ISBN": "4774174491",
+          "ItemDimensions": {
+            "Weight": "0"
+          },
+          "Label": "\u6280\u8853\u8a55\u8ad6\u793e",
+          "Languages": {
+            "Language": {
+              "Name": "\u65e5\u672c\u8a9e",
+              "Type": "Published"
+            }
+          },
+          "Manufacturer": "\u6280\u8853\u8a55\u8ad6\u793e",
+          "NumberOfPages": "272",
+          "PackageDimensions": {
+            "Height": "71",
+            "Length": "827",
+            "Weight": "97",
+            "Width": "583"
+          },
+          "ProductGroup": "Book",
+          "ProductTypeName": "ABIS_BOOK",
+          "PublicationDate": "2015-07-24",
+          "Publisher": "\u6280\u8853\u8a55\u8ad6\u793e",
+          "Studio": "\u6280\u8853\u8a55\u8ad6\u793e",
+          "Title": "\u3053\u308c\u304b\u3089\u306f\u3058\u3081\u308bSEO\u3000\u9867\u5ba2\u601d\u8003\u306e\u6559\u79d1\u66f8\u3000\uff5e\u30e6\u30fc\u30b6\u30fc\u91cd\u8996\u306eWeb\u30b5\u30a4\u30c8\u30925\u3064\u306e\u8996\u70b9\u3067\u5b9f\u73fe\u3059\u308b",
+          "ASIN": "4774174491",
+          "DetailPageURL": "https:\/\/www.amazon.co.jp\/%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89%E3%81%AF%E3%81%98%E3%82%81%E3%82%8BSEO-%E9%A1%A7%E5%AE%A2%E6%80%9D%E8%80%83%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8-%EF%BD%9E%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E9%87%8D%E8%A6%96%E3%81%AEWeb%E3%82%B5%E3%82%A4%E3%83%88%E3%82%925%E3%81%A4%E3%81%AE%E8%A6%96%E7%82%B9%E3%81%A7%E5%AE%9F%E7%8F%BE%E3%81%99%E3%82%8B-%E7%80%A7%E5%86%85-%E8%B3%A2\/dp\/4774174491?SubscriptionId=AKIAIFZUDIHA6GF2PJSQ&tag=onzieme-22&linkCode=xm2&camp=2025&creative=165953&creativeASIN=4774174491",
+          "SalesRank": 437655,
+          "IFrameReviewURL": "https:\/\/www.amazon.jp\/reviews\/iframe?akid=AKIAIFZUDIHA6GF2PJSQ&alinkCode=xm2&asin=4774174491&atag=onzieme-22&exp=2018-07-16T01%3A54%3A57Z&v=2&sig=8HDidSnUiXk3QCyG8%252BiOm8g9q339rz6StjwLd49rbtM%253D",
+          "OfferSummary": {
+            "LowestNewPrice": {
+              "Amount": "2138",
+              "CurrencyCode": "JPY",
+              "FormattedPrice": "\uffe5 2,138"
+            },
+            "LowestUsedPrice": {
+              "Amount": "642",
+              "CurrencyCode": "JPY",
+              "FormattedPrice": "\uffe5 642"
+            },
+            "TotalNew": "2",
+            "TotalUsed": "22",
+            "TotalCollectible": "0",
+            "TotalRefurbished": "0"
+          },
+          "SmallImage": {
+            "src": "https:\/\/images-fe.ssl-images-amazon.com\/images\/I\/51bqgx5ztAL._SL75_.jpg",
+            "width": 53,
+            "height": 75
+          },
+          "MediumImage": {
+            "src": "https:\/\/images-fe.ssl-images-amazon.com\/images\/I\/51bqgx5ztAL._SL160_.jpg",
+            "width": 113,
+            "height": 160
+          },
+          "LargeImage": {
+            "src": "https:\/\/images-fe.ssl-images-amazon.com\/images\/I\/51bqgx5ztAL.jpg",
+            "width": 352,
+            "height": 500
+          },
+          "CountryCode": "JP",
+          "UpdatedAt": 1531619697
+        }]
+      }; /* ]]> */
+    </script>
+    <script src='https://on-ze.com/wordpress/wp-content/plugins/amazonjs/js/amazonjs.js'></script>
+    <script type='text/javascript' src='https://stats.wp.com/e-201828.js' async='async' defer='defer'></script>
+    <script type='text/javascript'>
+      _stq = window._stq || [];
+      _stq.push(['view', {
+        v: 'ext',
+        j: '1:6.3.2',
+        blog: '62465411',
+        post: '4831',
+        tz: '9',
+        srv: 'on-ze.com'
+      }]);
+      _stq.push(['clickTrackerInit', '62465411', '4831']);
+    </script>
+    <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async="async"></script>
+    <script src="https://on-ze.com/wordpress/wp-content/themes/onze-2017/js/main.js" defer="defer"></script>
+    <script src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script src="https://on-ze.com/wordpress/wp-content/themes/onze-2017/js/set-single.js" defer="defer"></script>
+    <script>
+      document.getElementById("hero").style.backgroundImage = 'url("https://on-ze.com/wordpress/wp-content/themes/onze-2017/inc/timthumb.php?src=https://on-ze.com/wordpress/wp-content/uploads/2015/03/badge_html5.png&w=800&h=400&q=100")';
+    </script>
+    <script type="application/ld+json">
+      [{
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "ONZE",
+        "url": "https://on-ze.com",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://on-ze.com/wordpress/wp-content/themes/onze-2017/icon/icon.png",
+          "height": 1200,
+          "width": 1200
+        },
+        "sameAs": ["https://twitter.com/on_ze_com", "https://www.facebook.com/株式会社-オンズ-473691596016331"],
+        "author": {
+          "@type": "Organization",
+          "name": "株式会社オンズ",
+          "url": "https://on-ze.com",
+          "email": "&#105;nf&#111;&#64;o&#110;&#45;ze.com",
+          "telephone": "090-6502-9911"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://on-ze.com/?s={query}",
+          "query-input": "required name=query"
+        }
+      }, {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://on-ze.com/archives/4831"
+        },
+        "headline": "HTML の &lt;head&gt;〜&lt;/head&gt; 内に書くタグの順番にも気を遣ってみた。",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://on-ze.com/wordpress/wp-content/themes/onze-2017/icon/icon.png",
+          "height": 1200,
+          "width": 1200
+        },
+        "articleSection": ["HTML", "SEO"],
+        "datePublished": "2016-01-20T08:00:30+00:00",
+        "dateModified": "2018-01-21T23:06:10+00:00",
+        "author": {
+          "@type": "Person",
+          "name": "ONZE"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "株式会社オンズ",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://on-ze.com/wordpress/wp-content/themes/onze-2017/icon/icon.png",
+            "width": 60,
+            "height": 60
+          }
+        },
+        "description": "今アナタがご覧になっている、このオンズのウェブサイトでは読み込み速度のスピードアップや各種マークアップのクオリティ維持のために随時徹底した改善作業を行っています。 これまでも本ブログにて様々なテクニックを紹介してきましたが、今日は&lt;head&gt;〜&lt;/head&gt;タグ内のコードにフォーカスして、弊社が..."
+      }, {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://on-ze.com",
+            "name": "オンズ"
+          }
+        }, {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://on-ze.com/category/blog",
+            "name": "開発ブログ"
+          }
+        }, {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://on-ze.com/archives/4831",
+            "name": "HTML の &lt;head&gt;〜&lt;/head&gt; 内に書くタグの順番にも気を遣ってみた。"
+          }
+        }]
+      }]
+    </script>
+  </div>
+</body>
+
+</html>
